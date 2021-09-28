@@ -128,7 +128,7 @@ app.use((reqest, resposnse) => {
   })
 })
 
-const PORT = 3002 // puerto libre que el servidor escucha.
+const PORT = process.env.PORT || 3002 // El puerto lo asigna Heroku. E caso de error se usa el 3002
 
 app.listen(PORT, () => {
   console.log(`server running in port ${PORT}`)
